@@ -26,10 +26,11 @@
 			  <option value="R">Réaumur</option>
 			</select>
 		  </div>
-		  <br><button type="button" class="btn btn-primary">Convert</button>
+		  <br><button type="button" class="btn btn-primary" >Convert</button>
+		 
 		</form>
 	</div>
-	<div id="result" style="margin-top:10px;margin-left:10px; font-size: 20px; color:red;">
+	 <div id="result" style="margin-top:10px;margin-left:10px; font-size: 20px; color:red;" ></div>
 	</div>
 	
 	<script>
@@ -52,7 +53,7 @@
 
 				   
 			   var t1;
-			   var u1;
+			   var u1;	
 			  
 			   if(u == "F"){
 					t1 = t * (9/5) + 32;
@@ -64,8 +65,11 @@
 					t1 = t * (4/5);
 					u1 = "Kelvin";
 			   }
+			  
 			   
-			   alert("Temperature is "+t1+" in "+u1);
+			   document.getElementById("result").innerHTML = ("Temperature is "+t1+" in "+u1) ;
+			   
+			   
 			});
 		});
 	</script>
